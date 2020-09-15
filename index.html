@@ -11,11 +11,25 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	</head>
 	<body>
-		<div id="particles-js">
+		<div id="particles-js"></div>
+		<div class="text-area">
+			<h1 style="top: 45%">Hello World!</h1>
+			<h1><span class="typedText"></span></h1>
 		</div>
+		<!-- typed.js -->
+		<script type="text/javascript" src="./js/typed/typed.js"></script>
+		<script type="text/javascript">
+			var typed = new Typed('.typedText', {
+  			strings: ["I am Harry Tran.", 
+  			"I am an SJSU alumnus.", 
+  			"I am a programer.", 
+  			"I am a devloper.", 
+  			"Welcome to my website."],
+  			typeSpeed: 30, backSpeed: 30, backDelay: 2000, loop: true, smartBackspace: true,
+  			showCursor: true, cursorChar: '|'
+			});
+		</script>
 		<script type="text/javascript" src="./js/particles/particles.js"></script>
 		<script type="text/javascript" src="./js/particles/app.js"></script>
-		<h1>Hello World!!</h1>
-		<p>I'm hosted with GitHub Pages.</p>
 	</body>
 </html>
