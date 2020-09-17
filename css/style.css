@@ -11,18 +11,91 @@ h1{
 	width: 100%;
 }
 
+/*---- banners ----*/
+.banner{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+	padding: 40px;
+	width: 70vh;
+}
+
+.banner span:nth-child(1){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: linear-gradient(to right, #000520, #f7f58d);
+	animation: animTop 1s linear infinite
+}
+@keyframes animTop {
+	0% {transform: translateX(-100%);}
+	100% {transform: translateX(100%);}
+}
+
+.banner span:nth-child(2){
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: linear-gradient(to left, #000520, #f7f58d);
+	animation: animBot 1s linear infinite;
+}
+@keyframes animBot {
+	0% {transform: translateX(100%);}
+	100% {transform: translateX(-100%);}
+}
+
+.banner span:nth-child(3){
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5px;
+	height: 100%;
+	background: linear-gradient(to bottom, #000520, #f7f58d);
+	animation: animRight 1s linear infinite;
+	animation-delay: .5s;
+}
+@keyframes animRight {
+	0% {transform: translateY(-100%);}
+	100% {transform: translateY(100%);}
+}
+
+.banner span:nth-child(4){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+	background: linear-gradient(to top, #000520, #f7f58d);
+	animation: animLeft 1s linear infinite;
+	animation-delay: .5s;
+}
+@keyframes animLeft {
+	0% {transform: translateY(100%);}
+	100% {transform: translateY(-100%);}
+}
+
 /*---- containers and wrappers ----*/
 .container{
 	display: flex;
 	position: relative;
 	justify-content: center;
 	min-height: 100vh;
+	background: transparent;
 }
 
-.jumbowrapper{
-	position: relative;
-	justify-content: center;
-	min-height: 100vh;
+#aboutme .container {
+	display: inline;
+}
+
+#projects .container {
+	display: flex;
+	margin-top: 5vh;
 }
 
 /*---- particles.js ----*/
