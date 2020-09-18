@@ -11,6 +11,29 @@ h1{
 	width: 100%;
 }
 
+.sidebar{
+	height: 370px;
+	width: 55px;
+	position: fixed;
+	z-index: 10;
+	top: 20vh;
+	right: 3vw;
+	overflow: hidden;
+	text-shadow: 0px 5px 7px black;
+	padding-left: 5px;
+}
+
+.sidebar a{
+	font-size: 40px;
+	color: #f7f58d;
+}
+
+.sidebar a:hover{
+	font-size: 45px;
+	color: white;
+	text-shadow: 0px 5px 7px #f7f58d;
+}
+
 /*---- banners ----*/
 .banner{
 	display: flex;
@@ -19,7 +42,7 @@ h1{
 	margin: auto;
 	overflow: hidden;
 	padding: 40px;
-	width: 70vh;
+	width: 50vw;
 }
 
 .banner span:nth-child(1){
@@ -86,16 +109,65 @@ h1{
 	position: relative;
 	justify-content: center;
 	min-height: 100vh;
-	background: transparent;
 }
 
 #aboutme .container {
-	display: inline;
+	display: block;
+	margin: 5vh auto 5vh;
+	background: white;
 }
 
 #projects .container {
-	display: flex;
-	margin-top: 5vh;
+	display: block;
+	margin: 5vh auto 5vh;
+	background: white;
+}
+
+/*---- swiper.js ----*/
+.swiper-container {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 80vh;
+	height: 80vh;
+}
+
+.aboutswiper {
+	width: 70vw;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    border: #f7f58d solid 1px;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #f7f58d;
+    box-shadow: 0px 0px 70px #edeb8c;
+}
+
+.swiper-slide a {
+	border-radius: 50%;
+	font-size: 40px;
+	top: 90%;
+	right: 48.75%;
+	position: absolute;
+	text-align: center;
+	color: black;
+}
+
+.swiper-slide a:hover{
+	font-size: 45px;
+	color: white;
 }
 
 /*---- particles.js ----*/
