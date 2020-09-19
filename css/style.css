@@ -11,6 +11,7 @@ h1{
 	width: 100%;
 }
 
+/*---- sidebar ----*/
 .sidebar{
 	height: 370px;
 	width: 55px;
@@ -34,7 +35,7 @@ h1{
 	text-shadow: 0px 5px 7px #f7f58d;
 }
 
-/*---- banners ----*/
+/*---- animated banner ----*/
 .banner{
 	display: flex;
 	justify-content: center;
@@ -111,16 +112,36 @@ h1{
 	min-height: 100vh;
 }
 
-#aboutme .container {
+#contactme .container {
 	display: block;
-	margin: 5vh auto 5vh;
-	background: white;
+	margin-top: 5vh;
+	text-align: center;
 }
 
-#projects .container {
-	display: block;
-	margin: 5vh auto 5vh;
-	background: white;
+/*---- form ----*/
+#contactme label {
+	font: 20px/1 consolas;
+	color: #f7f58d;
+	text-shadow: 0px 5px 7px black;
+}
+
+#contactme input {
+	border-style: dashed;
+	border-color: #f7f58d;
+	background: transparent;
+	color: #f7f58d;
+}
+
+#contactme textarea {
+	height: 50vh;
+	border-style: dashed;
+	border-color: #f7f58d;
+	background: transparent;
+	color: #f7f58d;
+}
+
+#contactme button:hover {
+	box-shadow: 1px 3px 5px #edeb8c;
 }
 
 /*---- swiper.js ----*/
@@ -183,7 +204,7 @@ h1{
 	opacity: 1;
 }
 
-/*---- Buttons ----*/
+/*---- Main Buttons ----*/
 .btn-group button{
 	position: relative;
 	list-style: none;
