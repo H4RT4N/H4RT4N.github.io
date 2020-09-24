@@ -52,7 +52,7 @@ h1{
 	left: 0;
 	width: 100%;
 	height: 5px;
-	background: linear-gradient(to right, #000520, #f7f58d);
+	background: linear-gradient(to right, transparent, #f7f58d);
 	animation: animTop 1s linear infinite
 }
 @keyframes animTop {
@@ -66,7 +66,7 @@ h1{
 	left: 0;
 	width: 100%;
 	height: 5px;
-	background: linear-gradient(to left, #000520, #f7f58d);
+	background: linear-gradient(to left, transparent, #f7f58d);
 	animation: animBot 1s linear infinite;
 }
 @keyframes animBot {
@@ -80,7 +80,7 @@ h1{
 	right: 0;
 	width: 5px;
 	height: 100%;
-	background: linear-gradient(to bottom, #000520, #f7f58d);
+	background: linear-gradient(to bottom, transparent, #f7f58d);
 	animation: animRight 1s linear infinite;
 	animation-delay: .5s;
 }
@@ -95,7 +95,7 @@ h1{
 	left: 0;
 	width: 5px;
 	height: 100%;
-	background: linear-gradient(to top, #000520, #f7f58d);
+	background: linear-gradient(to top, transparent, #f7f58d);
 	animation: animLeft 1s linear infinite;
 	animation-delay: .5s;
 }
@@ -193,10 +193,18 @@ h1{
 
 /*---- particles.js ----*/
 #particles-js{
-	background: #000520;
 	position: fixed;
 	width: 100%;
 	height: 100%;
+	animation: colorchange infinite alternate ease-in-out 10s;
+}
+@keyframes colorchange{
+	0% {background: #000000;}
+	20% {background: #000520;}
+	40% {background: #070b34;}
+	60% {background: #141852;}
+	80% {background: #092566;}
+	100% {background: #0e628a;}
 }
 
 /*---- typed.js ----*/
