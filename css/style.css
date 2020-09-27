@@ -146,20 +146,23 @@ h1{
 
 /*---- swiper.js ----*/
 .swiper-container {
-	width: 100%;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
 .swiper-slide {
 	background-position: center;
-	background-size: cover;
-	width: 80vw;
-	height: 80vh;
+	background-size: 100% 100%;
 }
 
 .aboutswiper {
-	width: 70vw;
+	width: 1334px;
+	height: 750px;
+}
+
+.projectswiper .swiper-slide{
+	width: 950px;
+	height: 750px;
 }
 
 .swiper-pagination-bullet {

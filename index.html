@@ -54,15 +54,8 @@
 			</h1>
 			<div class="swiper-container aboutswiper">
     			<div class="swiper-wrapper">
-    				<div class="swiper-slide" style="background-image:url(./img/cat.jpg)">
-    					<a href="https://github.com/H4RT4N?tab=repositories"><i class="fa fa-github" aria-hidden="true"></i></a>
-    				</div>
-    				<div class="swiper-slide" style="background-image:url(./img/cat2.jpg)">
-    					<a href="https://github.com/H4RT4N?tab=repositories"><i class="fa fa-github" aria-hidden="true"></i></a>
-    				</div>
-    				<div class="swiper-slide" style="background-image:url(./img/cat.jpg)">
-    					<a href="https://github.com/H4RT4N?tab=repositories"><i class="fa fa-github" aria-hidden="true"></i></a>
-    				</div>
+    				<div class="swiper-slide" style="background-image:url(./img/profile.png)"></div>
+    				<div class="swiper-slide" style="background-image:url(./img/edu.png)"></div>
     			</div>
     			<div class="swiper-pagination"></div>
     		</div>
@@ -77,13 +70,13 @@
 			</h1>
 			<div class="swiper-container projectswiper">
     			<div class="swiper-wrapper">
-    				<div class="swiper-slide" style="background-image:url(./img/cat.jpg)">
+    				<div class="swiper-slide" style="background-image:url(./img/piman.png)">
     					<a href="https://github.com/H4RT4N?tab=repositories"><i class="fa fa-github" aria-hidden="true"></i></a>
     				</div>
-    				<div class="swiper-slide" style="background-image:url(./img/cat2.jpg)">
+    				<div class="swiper-slide" style="background-image:url(./img/piman.png)">
     					<a href="https://github.com/H4RT4N?tab=repositories"><i class="fa fa-github" aria-hidden="true"></i></a>
     				</div>
-    				<div class="swiper-slide" style="background-image:url(./img/cat.jpg)">
+    				<div class="swiper-slide" style="background-image:url(./img/piman.png)">
     					<a href="https://github.com/H4RT4N?tab=repositories"><i class="fa fa-github" aria-hidden="true"></i></a>
     				</div>
     			</div>
@@ -136,13 +129,13 @@
 		<script type="text/javascript" src="./js/swiper/swiper.min.js"></script>
 		<script>
 			var aboutswiper = new Swiper('.aboutswiper', {
-				effect: 'flip', grabCursor: true,
+				effect: 'flip', grabCursor: true, loop: true,
 				pagination: {el: '.swiper-pagination', dynamicBullets: true, clickable: true},
 			});
 		</script>
 		<script>
 			var projectswiper = new Swiper('.projectswiper', {
-				effect: 'coverflow', grabCursor: true, centeredSlides: true, slidesPerView: 'auto',
+				effect: 'coverflow', grabCursor: true, centeredSlides: true, slidesPerView: 'auto', loop: true,
 				coverflowEffect: { rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true,},
 			});
 		</script>
