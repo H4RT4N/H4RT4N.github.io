@@ -146,8 +146,6 @@ h1{
 
 /*---- swiper.js ----*/
 .swiper-container {
-	width: 100vw;
-	justify-content: center;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -158,13 +156,13 @@ h1{
 }
 
 .aboutswiper {
-	width: 1334px;
-	height: 750px;
+	width: 70vw;
+	height: 80vh;
 }
 
 .projectswiper .swiper-slide{
-	width: 950px;
-	height: 750px;
+	width: 50vw;
+	height: 80vh;
 }
 
 .swiper-pagination-bullet {
