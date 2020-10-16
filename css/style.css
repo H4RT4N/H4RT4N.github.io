@@ -104,20 +104,6 @@ h1{
 	100% {transform: translateY(-100%);}
 }
 
-/*---- containers and wrappers ----*/
-.container{
-	display: flex;
-	position: relative;
-	justify-content: center;
-	min-height: 100vh;
-}
-
-#contactme .container {
-	display: block;
-	margin-top: 5vh;
-	text-align: center;
-}
-
 /*---- form ----*/
 #contactme label {
 	font: 20px/1 consolas;
@@ -197,8 +183,11 @@ h1{
 /*---- particles.js ----*/
 #particles-js{
 	position: fixed;
-	width: 100%;
-	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
 	animation: colorchange infinite alternate ease-in-out 10s;
 }
 @keyframes colorchange{
