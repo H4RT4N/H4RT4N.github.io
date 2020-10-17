@@ -20,7 +20,7 @@ h1{
 	background: black;
 }
 .preloader.complete{
-	animation: fadeout 1s;
+	animation: fadeout 2s;
 }
 @keyframes fadeout{
 	0%{opacity: 100%;}
