@@ -16,7 +16,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<div class="preloader">
+		<div class="d-flex justify-content-center preloader">
+			<h1 style="top: 45%"><span class="loadingText"></span></h1>
 			<div class="circle"></div>
 		</div>
 		<div id="particles-js">
@@ -130,6 +131,14 @@
   			showCursor: true, cursorChar: '|'
 			});
 		</script>
+		<script type="text/javascript">
+			var typed = new Typed('.loadingText', {
+  			strings: ["Loading...", 
+  			"Please Wait..."],
+  			typeSpeed: 30, backSpeed: 30, backDelay: 2000, loop: true,
+  			showCursor: true, cursorChar: '|'
+			});
+		</script>
 		<!-- particles.js script -->
 		<script type="text/javascript" src="./js/particles/particles.js"></script>
 		<script type="text/javascript" src="./js/particles/app.js"></script>
@@ -161,7 +170,7 @@
 			setTimeout(function(){
 				let loader = document.querySelector('.preloader');
 				loader.parentElement.removeChild(loader);
-			}, 2000);
+			}, 1000);
 		</script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</body>
