@@ -16,6 +16,9 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
+		<div class="preloader">
+			<div class="circle"></div>
+		</div>
 		<div id="particles-js">
 			<canvas class="particles-js-canvas-el"></canvas>
 		</div>
@@ -151,6 +154,15 @@
 		<script type="text/javascript" src="./js/contactform.js"></script>
 		<!-- jquery & bootstrap scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(window).on('load', function clearLoader(){
+				$('.preloader').addClass('complete')
+			})
+			setTimeout(function(){
+				let loader = document.querySelector('.preloader');
+				loader.parentElement.removeChild(loader);
+			}, 2000);
+		</script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</body>
 </html>
