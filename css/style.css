@@ -208,8 +208,8 @@ h1{
 }
 
 .projectswiper .swiper-slide{
-	width: 50vw;
-	height: 80vh;
+	width: 950px;
+	height: 750px;
 }
 
 .swiper-pagination-bullet {
