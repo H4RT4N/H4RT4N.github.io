@@ -269,13 +269,13 @@ h1{
 	line-height: 1.5;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .aboutswiper .title {
-    font-size: 25px;
+    font-size: 35px;
   }
 
   .aboutswiper .text {
-  	font-size: 18px;
+  	font-size: 20px;
   }
 }
 
