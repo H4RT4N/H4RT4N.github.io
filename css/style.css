@@ -271,11 +271,11 @@ h1{
 
 @media screen and (max-width: 1000px) {
   .aboutswiper .title {
-    font-size: 80px;
+    font-size: 35px;
   }
 
   .aboutswiper .text {
-  	font-size: 60px;
+  	font-size: 20px;
   }
 }
 
