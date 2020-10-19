@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="aboutme">
+		<div id="aboutme" style="padding-bottom: 35px;">
 			<h1 class="banner">
 				<span></span>
 				<span></span>
@@ -57,14 +57,46 @@
 				About Me
 			</h1>
 			<div class="swiper-container aboutswiper">
+    			<div class="parallax-bg" style="background-image:url(./img/profile.png)" data-swiper-parallax="-23%"></div>
     			<div class="swiper-wrapper">
-    				<div class="swiper-slide" style="background-image:url(./img/profile.png)"></div>
-    				<div class="swiper-slide" style="background-image:url(./img/edu.png)"></div>
+    				<div class="swiper-slide">
+    					<div class="title" data-swiper-parallax="-300">Profile</div>
+    					<div class="text" data-swiper-parallax="-100">
+    						<p>
+    							In all of my years of coding the most valuable trait that 
+    							I have developed is the willingness to add
+    							new skills to my kit and improve on old skills. <br> <br>
+    							I believe that in this frequently changing 
+    							industry, being able to adapt to change and 
+    							apply it to yourself benefits both you and the collective. <br> <br>
+    							Looking for an entry level position in web development, software development, 
+    							cyber security, or computer networking.
+    						</p>
+    					</div>
+    				</div>
+    				<div class="swiper-slide">
+    					<div class="title" data-swiper-parallax="-300" style="right: 1vw;">Education</div>
+    					<div class="text" data-swiper-parallax="-100" style="right: 1vw; max-width: 550px;">
+    						<p>
+    							<strong>San Jose State University</strong> (2016 - 2020) <br>
+    							- Bachelor of Science in Computer Science (Spring 2020)<br>
+    							- Basic Certificate in Cybersecurity Fundamentals (Fall 2019)<br> 
+    							<br>
+    							<strong>Deep Course</strong>: Computer Network Management <br> <br>
+    							<u>Favorite Courses</u> <br>
+    							Data Structures and Algorithms <br>
+                 				Software Engineering <br>
+                 				Intro to Artificial Intelligence <br>
+                 				Intro to Database Management Systems <br>
+                 				Information Security <br>
+    						</p>
+    					</div>
+    				</div>
     			</div>
-    			<div class="swiper-pagination"></div>
-    		</div>
+    			<div class="swiper-scrollbar"></div>
+			</div>
 		</div>
-		<div id="projects">
+		<div id="projects" style="padding-bottom: 30px;">
 			<h1 class="banner">
 				<span></span>
 				<span></span>
@@ -87,6 +119,7 @@
     					<a href="https://github.com/SBoulanger/NotFlix" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
     				</div>
     			</div>
+    			<div class="swiper-pagination"></div>
     		</div>
 		</div>
 		<div id="contactme">
@@ -100,17 +133,23 @@
 			<div class="container position-relative d-block text-center pt-5 vh-100">
 				<form id="contactmeform">
 					<fieldset>
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+							Your message has been sent!
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
 						<div class="form-group">
 							<label for="sumbittername">Your Name</label>
-							<input type="text" class="form-control form-control-lg" id="name" placeholder="Enter Name">
+							<input type="text" class="form-control form-control-lg" id="name" placeholder="Enter Name" required>
 						</div>
 						<div class="form-group">
 							<label for="submittercontact">Your Contact Information</label>
-							<input type="text" class="form-control form-control-lg" id="submittercontact" placeholder="Email and/or Phone #">
+							<input type="text" class="form-control form-control-lg" id="submittercontact" placeholder="Email and/or Phone #" required>
 						</div>
 						<div class="form-group">
 							<label for="message">Message</label>
-							<textarea class="form-control form-control-lg" id="msg" rows="3"></textarea>
+							<textarea class="form-control form-control-lg" id="msg" rows="3" required></textarea>
 						</div>
 						<button type="submit" class="btn btn-md btn-outline-warning">Submit</button>
 					</fieldset>
@@ -145,14 +184,15 @@
 		<script type="text/javascript" src="./js/swiper/swiper.min.js"></script>
 		<script>
 			var aboutswiper = new Swiper('.aboutswiper', {
-				effect: 'flip', grabCursor: true, loop: true,
-				pagination: {el: '.swiper-pagination', dynamicBullets: true, clickable: true},
+				speed: 600, parallax: true,
+				scrollbar: { el: '.swiper-scrollbar',},
 			});
 		</script>
 		<script>
 			var projectswiper = new Swiper('.projectswiper', {
 				effect: 'coverflow', grabCursor: true, centeredSlides: true, slidesPerView: 'auto', loop: true,
 				coverflowEffect: { rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true,},
+				pagination: {el: '.swiper-pagination', dynamicBullets: true, clickable: true},
 			});
 		</script>
 		<!-- firebase and form script -->

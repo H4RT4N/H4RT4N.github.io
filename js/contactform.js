@@ -22,11 +22,15 @@ function submitForm(e){
 	var contact = getInput('submittercontact');
 	var msg = getInput('msg');
 
+	// send message
 	sendMsg(name, contact, msg);
 
-	console.log(name);
-	console.log(contact);
-	console.log(msg);
+	// confirmation
+	document.querySelector('.alert').style.display = 'block';
+	// hide confirmation
+	setTimeout(function() {
+		document.querySelector('.alert').style.display = 'none';
+	}, 2500)
 
 	document.getElementById('contactmeform').reset();
 }
