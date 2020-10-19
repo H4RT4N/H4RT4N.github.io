@@ -241,6 +241,8 @@ h1{
 }
 
 .aboutswiper .swiper-slide {
+	width: 100%;
+	height: 750px;
 	font-family: consolas;
 	color: #f7f58d;
 	text-shadow: 0px 5px 7px black;
@@ -250,27 +252,18 @@ h1{
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 10%;
 	padding: 0 10px 0;
-	position:absolute;
-	top: 30%;
+	position: absolute;
+	top: 290px;
 	font-size: 35px;
 	font-weight: 200;
-}
-
-.aboutswiper .subtext {
-	background-color: rgba(0, 0, 0, 0.8);
-	border-radius: 10%;
-	padding: 0 10px 0;
-	position:absolute;
-	top: 35%;
-	font-size: 25px;
 }
 
 .aboutswiper .text {
 	background-color: rgba(0, 0, 0, 0.9);
 	border-radius: 5%;
 	padding: 10px;
-	position:absolute;
-	top: 40%;
+	position :absolute;
+	top: 350px;
 	font-size: 20px;
 	max-width: 450px;
 	line-height: 1.5;
