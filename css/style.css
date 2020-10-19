@@ -269,6 +269,16 @@ h1{
 	line-height: 1.5;
 }
 
+@media screen and (max-width: 1000px) {
+  .aboutswiper .title {
+    font-size: 80px;
+  }
+
+  .aboutswiper .text {
+  	font-size: 60px;
+  }
+}
+
 /*---- swiper.js PROJECT swiper ----*/
 .projectswiper .swiper-slide{
 	width: 950px;
