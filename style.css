@@ -65,6 +65,7 @@ span {
     #08152a
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 600% 600%;
   animation: gradientShift 10s ease-in-out infinite;
@@ -79,6 +80,7 @@ span {
     #3c78d8
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 600% 600%;
   animation: gradientShift 10s ease-in-out infinite;
@@ -619,12 +621,8 @@ span {
   h1 {
     font-size: 30px;
   }
-  .nav a{
-    color: #f7f58d;
-  }
   .links a {
     margin: 50px 10px;
-    color: #f7f58d;
   }
   .links a:before {
     font-size: 2em;
