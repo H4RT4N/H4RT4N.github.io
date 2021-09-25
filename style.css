@@ -45,6 +45,9 @@ h1 {
   font-size: 50px;
   font-weight: 1;
 }
+a {
+  text-decoration: none;
+}
 /*
 .hint span {
   font-size: 10px;
@@ -154,7 +157,9 @@ i {
 .mixtape:hover.showTracks {
   height: 150px;
 }
-.mixtape:hover span {
+
+.mixtape:hover span,
+.mixtape:hover i {
   -webkit-text-fill-color: #f7f58d;
   color: #f7f58d;
 }
@@ -251,7 +256,6 @@ i {
 .nav a,
 .formGroup a {
   position: relative;
-  text-decoration: none;
   background: transparent;
   padding: 10px;
   margin: 5px;
@@ -500,9 +504,12 @@ i {
   flex-direction: row;
 }
 .swiper-slide .pubCard .metaInfo .pubLinks a {
-  color: #f7f58d;
-  font-size: 25px;
+  font-size: 30px;
   margin: 0 10px;
+}
+.swiper-slide .pubCard .metaInfo .pubLinks i {
+  -webkit-text-fill-color: #f7f58d;
+  color: #f7f58d;
 }
 .swiper-slide .pubCard .content {
   display: flex;
