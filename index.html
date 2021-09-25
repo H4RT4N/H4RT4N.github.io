@@ -1,1 +1,358 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A responsive and interactive alternative to my resume."
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <title>Harry Tran's Portfolio</title>
+  </head>
+
+  <body>
+    <section class="background"></section>
+    <section class="mixtape">
+      <div class="currentTrack">
+        <span class="prev"><i class="fa fa-backward"></i></span>
+        <div class="titleWrapper">
+          <span class="title">Music Name</span>
+        </div>
+        <span class="next"><i class="fa fa-forward"></i></span>
+      </div>
+      <div class="tracksWrapper">
+        <span class="track" data-no="">Music Name</span>
+        <span class="track" data-no="">Music Name</span>
+        <span class="track" data-no="">Music Name</span>
+        <span class="track" data-no="">Music Name</span>
+        <span class="track" data-no="">Music Name</span>
+      </div>
+      <div class="player">
+        <audio>
+          <source src="" type="audio/mp3" />
+        </audio>
+        <span class="playBtn"><i id="playIcon" class="fa fa-play"></i></span>
+        <div class="seekBar">
+          <input id="seek" type="range" min="0" max="100" value="0" />
+          <div class="trackTimestamp">
+            <span id="curTime">00:00</span>
+            <span>/</span>
+            <span id="durTime">00:00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="landing">
+      <div class="welcome">
+        <h1><span class="amTyped"></span></h1>
+      </div>
+      <div class="nav">
+        <a href="#about">
+          <span><i class="fa fa-user" aria-hidden="true"></i></span>
+          <span>About Me</span>
+        </a>
+        <a id="pubBtn" href="javascript:undefined" role="button">
+          <span><i class="fa fa-folder-open-o" aria-hidden="true"></i></span>
+          <span>Publications</span>
+        </a>
+        <a id="contactBtn" href="javascript:undefined" role="button">
+          <span><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="links">
+        <a
+          href="https://docs.google.com/document/d/1TgdbPpXj0I0podkQhrB0PEfKc4p0UFrm6V0e1ix7VHg/edit?usp=sharing"
+          target="_blank"
+          data-text="RESUME"
+          ><span><i class="fa fa-file" aria-hidden="true"></i></span
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/harry-tran"
+          target="_blank"
+          data-text="LINKEDIN"
+          ><span><i class="fa fa-linkedin" aria-hidden="true"></i></span
+        ></a>
+        <a href="https://github.com/H4RT4N" target="_blank" data-text="GITHUB"
+          ><span><i class="fa fa-github" aria-hidden="true"></i></span
+        ></a>
+      </div>
+      <div class="swiper-container aboutSwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="aboutCard">
+              <div class="imgBox">
+                <img src="./images/profile.png" />
+              </div>
+              <div class="content">
+                <h2>About Me</h2>
+                <p>
+                  As a gamer and a netizen, computers and the internet are major
+                  cornerstones in my life.
+                </p>
+                <br />
+                <p>
+                  All throughout my life, they have provided me with knowledge,
+                  entertainment, opportunity, and connections.
+                </p>
+                <br />
+                <p>
+                  So, here I am, building a career in web/software development.
+                </p>
+                <br />
+                <p>
+                  Afterall, what could be better than adding to something that
+                  has made you and so many others?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="aboutCard">
+              <div class="imgBox">
+                <img src="./images/edu.jpg" />
+              </div>
+              <div class="content">
+                <h2>Education</h2>
+                <p
+                  class="contentHeader"
+                  style="text-align: center; margin: 15px, 0"
+                >
+                  <em>San Jose State University</em>
+                </p>
+                <p style="margin-bottom: 10px">
+                  Bachelor of Science in Computer Science [Spring 2020]
+                </p>
+                <p>
+                  Basic Certificate in CyberSecurity Fundamentals [Fall 2019]
+                </p>
+                <br />
+                <p>
+                  Relevant Coursework: <br />
+                  Object Oriented Design, Software Development, Computer
+                  Networking, Information Security, Data Structures and
+                  Algorithmns, Intro to Database Management
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="aboutCard">
+              <div class="imgBox">
+                <img src="./images/skills.png" />
+              </div>
+              <div class="content">
+                <h2>Skills</h2>
+                <p class="contentHeader"><em>Languages</em></p>
+                <p>
+                  HTML <br />
+                  CSS <br />
+                  JavaScript <br />
+                  Java <br />
+                  Python <br />
+                  NoSQL
+                </p>
+                <br />
+                <p class="contentHeader"><em>Tools/Frameworks</em></p>
+                <p>React, MongoDB, Firebase, JWT</p>
+                <br />
+                <p class="contentHeader"><em>Tech Stacks</em></p>
+                <p>M.E.R.N.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="publications">
+      <div class="links">
+        <a id="landingBtnP" href="javascript:undefined" data-text="HOME"
+          ><span><i class="fa fa-home" aria-hidden="true"></i></span
+        ></a>
+        <a
+          href="https://docs.google.com/document/d/1TgdbPpXj0I0podkQhrB0PEfKc4p0UFrm6V0e1ix7VHg/edit?usp=sharing"
+          target="_blank"
+          data-text="RESUME"
+          ><span><i class="fa fa-file" aria-hidden="true"></i></span
+        ></a>
+      </div>
+      <div>
+        <h1>Publications</h1>
+      </div>
+      <div class="swiper-container pubSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="pubTitle">
+              <h1>Portfolio Website</h1>
+            </div>
+            <div class="pubCard">
+              <div class="metaInfo">
+                <div class="techStack">
+                  <h2>HTML, CSS, Javascript</h2>
+                </div>
+                <div class="pubLinks">
+                  <a
+                    href="https://github.com/H4RT4N/H4RT4N.github.io"
+                    target="_blank"
+                  >
+                    <h2><i class="fa fa-github" aria-hidden="true"></i></h2>
+                  </a>
+                </div>
+              </div>
+              <div class="content">
+                <p><em>This</em> is it... how do you like it?.</p>
+                <p>
+                  I chose to build a responsive and interactive website that
+                  presents my personal portfolio in an aesthetic manner.
+                </p>
+                <p>
+                  There's also a music player hidden at the top left corner. :)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pubTitle">
+              <h1>PiMan</h1>
+            </div>
+            <div class="pubCard">
+              <div class="metaInfo">
+                <div class="techStack">
+                  <h2>Python, Bash Script</h2>
+                </div>
+                <div class="pubLinks">
+                  <a href="https://github.com/H4RT4N/PiMan" target="_blank">
+                    <h2><i class="fa fa-github" aria-hidden="true"></i></h2>
+                  </a>
+                </div>
+              </div>
+              <div class="content">
+                <p>
+                  Application that remotely manages and monitors raspberry pi's
+                  on a network.
+                </p>
+                <p>
+                  Custom PXE boot implemented to start up pi's & custom
+                  monitoring client implemented to watch over each pi.
+                </p>
+                <p>Internet access on each pi accomplished using IP tables.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pubTitle">
+              <h1>BookFace</h1>
+            </div>
+            <div class="pubCard">
+              <div class="metaInfo">
+                <div class="techStack">
+                  <h2>M.E.R.N. Stack, MongoDB, OAuth, JWT</h2>
+                </div>
+                <div class="pubLinks">
+                  <a href="https://github.com/H4RT4N/BookFace" target="_blank">
+                    <h2><i class="fa fa-github" aria-hidden="true"></i></h2>
+                  </a>
+                  <a
+                    href="https://practical-lovelace-78e0f5.netlify.app/"
+                    target="_blank"
+                  >
+                    <h2><i class="fa fa-link" aria-hidden="true"></i></h2>
+                  </a>
+                </div>
+              </div>
+              <div class="content">
+                <p>Mock SNS web app with full CRUD implementation.</p>
+                <p>User authentication done with Google OAuth and JWT.</p>
+                <p>Frontend built using MaterialUI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contactMe">
+      <div class="links">
+        <a id="landingBtnC" href="javascript:undefined" data-text="HOME"
+          ><span><i class="fa fa-home" aria-hidden="true"></i></span
+        ></a>
+        <a
+          class="smallerLink"
+          href="mailto:harrytr4n@gmail.com"
+          data-text="harrytr4n@gmail.com"
+          ><span><i class="fa fa-envelope" aria-hidden="true"></i></span
+        ></a>
+        <a
+          class="smallerLink"
+          href="tel:1-408-439-8030"
+          data-text="1-408-439-8030"
+          ><span><i class="fa fa-phone" aria-hidden="true"></i></span
+        ></a>
+      </div>
+      <div>
+        <h1>Send Me a Message!</h1>
+      </div>
+      <div class="formWrapper">
+        <form id="contactMeForm">
+          <div class="formGroup">
+            <div class="formControl">
+              <div class="inputBox">
+                <input type="text" id="submitter" required />
+                <span class="placeholder">Who Are You?</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="formGroup">
+            <div class="formControl">
+              <div class="inputBox">
+                <input type="text" id="contactInfo" required />
+                <span class="placeholder">Your Contact Info</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="formGroup">
+            <div class="formControl">
+              <div class="inputBox textBox">
+                <textarea id="msg" required></textarea>
+                <span class="placeholder">Your Message...</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="formGroup">
+            <button type="submit">
+              <a href="javascript:undefined">
+                <span>Submit</span>
+              </a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- scripts -->
+    <!-- typed.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- swiper.js -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- firebase and form script -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <!-- others -->
+    <script src="./index.js"></script>
+  </body>
+</html>
