@@ -1,0 +1,56 @@
+/* mobile specifications -------------------------------------------------------------------------------*/
+@media only screen and (max-width: 992px), (max-height: 450px) {
+    h1 {
+      font-size: 30px;
+    }
+    .links a {
+      margin: 50px 10px;
+    }
+    .links a:before {
+      font-size: 2em;
+    }
+    .links a.smallerLink:before {
+      font-size: 1em;
+    }
+    .nav a {
+      width: 150px;
+      height: 25px;
+      font-size: 15px;
+    }
+    #about {
+      height: 100%;
+    }
+    .swiper-slide-active .aboutCard {
+      height: 520px;
+      box-shadow: 0 0 10px #f7f58d;
+    }
+    .swiper-slide-active .aboutCard .content {
+      visibility: visible;
+      opacity: 1;
+      margin-top: -60px;
+      transition-delay: 0.3s;
+    }
+    .swiper-slide .pubCard .metaInfo {
+      margin-left: 7px;
+      margin-right: 7px;
+      margin-top: 50px;
+      margin-bottom: 7px;
+    }
+    .swiper-slide .pubCard .metaInfo .techStack {
+      margin-right: 10px;
+      font-size: 9px;
+    }
+    .swiper-slide .pubCard .metaInfo .pubLinks a {
+      margin: 0 5px;
+      font-size: 15px;
+    }
+    .swiper-slide .pubCard .content {
+      margin: 5px 10px;
+      font-size: 12px;
+      align-items: flex-start;
+    }
+    .formWrapper {
+      width: 375px;
+    }
+  }
+  

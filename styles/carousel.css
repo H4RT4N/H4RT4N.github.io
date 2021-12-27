@@ -1,0 +1,143 @@
+/* about me carousel -------------------------------------------------------------------------------------*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+  }
+  .aboutSwiper .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 670px;
+  }
+  
+  .swiper-slide .aboutCard {
+    position: relative;
+    width: 350px;
+    height: 215px;
+    margin: 100px 100px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    border-radius: 5%;
+  }
+  .swiper-slide .aboutCard:hover {
+    height: 520px;
+    box-shadow: 0 0 10px #f7f58d;
+  }
+  .swiper-slide .aboutCard .imgBox {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 45px;
+    border-radius: 5%;
+    box-shadow: 0 0 13px black;
+  }
+  .swiper-slide .aboutCard .imgBox img {
+    border-radius: 5%;
+    max-width: 100%;
+  }
+  .swiper-slide .aboutCard .content {
+    font-size: 14px;
+    color: #f7f58d;
+    text-shadow: 2px 2px 2px black;
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .swiper-slide .aboutCard:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -60px;
+    transition-delay: 0.3s;
+  }
+  .swiper-slide .aboutCard .content h2 {
+    text-align: center;
+    margin: 10px;
+  }
+  .swiper-slide .aboutCard .content .contentHeader {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+
+/* publications carousel ----------------------------------------------------------------------- */
+.pubSwiper {
+    width: 85vw;
+    height: 200px;
+    margin-top: 200px;
+  }
+  .pubSwiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide .pubTitle {
+    z-index: 1;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in-out;
+  }
+  .swiper-slide-active .pubTitle {
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+  .swiper-slide-active .pubTitle h1 {
+    -webkit-text-fill-color: #f7f58d;
+    color: #f7f58d;
+  }
+  
+  .swiper-slide .pubCard {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s ease-out 0s;
+  }
+  .swiper-slide-active .pubCard {
+    opacity: 1;
+    transition: 0.5s ease-in 1s;
+  }
+  
+  .swiper-slide .pubCard .metaInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+  }
+  .swiper-slide .pubCard .metaInfo .techStack {
+    color: #f7f58d;
+    font-size: 12px;
+  }
+  .swiper-slide .pubCard .metaInfo .pubLinks {
+    display: flex;
+    flex-direction: row;
+  }
+  .swiper-slide .pubCard .metaInfo .pubLinks a {
+    font-size: 30px;
+    margin: 0 10px;
+  }
+  .swiper-slide .pubCard .metaInfo .pubLinks i {
+    -webkit-text-fill-color: #f7f58d;
+    color: #f7f58d;
+  }
+  .swiper-slide .pubCard .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f7f58d;
+    margin: 25px 15px;
+  }
+  .swiper-slide .pubCard .content p {
+    margin: 2.5px 0;
+  }

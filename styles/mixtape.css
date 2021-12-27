@@ -1,0 +1,101 @@
+/* music player --------------------------------------------------------------------------------------------*/
+.mixtape {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 130px;
+    height: 32px;
+    overflow: hidden;
+    transition: height 1.5s, width 1s, opacity 1.5s, color 1.7s;
+    opacity: 0.2;
+  }
+  .mixtape:hover {
+    width: 200px;
+    height: 80px;
+    opacity: 1;
+  }
+  .mixtape:hover.showTracks {
+    height: 150px;
+  }
+  
+  .mixtape:hover span,
+  .mixtape:hover i {
+    -webkit-text-fill-color: #f7f58d;
+    color: #f7f58d;
+  }
+  
+  .currentTrack {
+    max-height: 32px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+  .titleWrapper {
+    font-size: 20px;
+    margin: 5px;
+    display: flex;
+    height: 32px;
+    width: 120px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    cursor: pointer;
+  }
+  .currentTrack .prev,
+  .next {
+    font-size: 20px;
+    font-weight: 100;
+    margin: 5px;
+  }
+  .tracksWrapper {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    width: 130px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: height 1s;
+  }
+  .tracksWrapper span {
+    cursor: pointer;
+    margin: 1.5px;
+    transition: transform 10s;
+  }
+  .tracksWrapper span:hover {
+    transform: translateX(-100%);
+  }
+  .tracksWrapper.showTracks {
+    height: 70px;
+  }
+  
+  .player {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  .playBtn {
+    font-size: 23px;
+    font-weight: 100;
+    margin: 5px;
+  }
+  .seekBar {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .trackTimestamp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 13px;
+  }

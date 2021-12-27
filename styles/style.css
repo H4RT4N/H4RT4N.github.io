@@ -1,0 +1,278 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: consolas;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s ease-in-out; /* see .hide */
+}
+
+/* overlay settings */
+section.hide {
+  opacity: 0;
+}
+body.noScroll {
+  overflow: hidden;
+}
+/* make publications & contact section overlays */
+.publications,
+.contactMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -2;
+  transition: 1.5s ease-in-out;
+}
+.publications.show,
+.contactMe.show {
+  z-index: 1;
+  opacity: 1;
+}
+
+/* Gradient background shift theme */
+@keyframes gradientShift {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+/* text effects -------------------------------------------------------------------------------*/
+h1 {
+  font-size: 50px;
+  font-weight: 1;
+}
+a {
+  text-decoration: none;
+}
+/*
+.hint span {
+  font-size: 10px;
+  margin: 10px;
+  -webkit-text-fill-color: #f7f58d;
+  color: #f7f58d;
+  opacity: 0.5;
+}
+*/
+h1,
+span,
+i {
+  color: #f7f58d; /* fallback */
+  background: -webkit-linear-gradient(
+    45deg,
+    #3c78d8,
+    #1155cc,
+    #06265b,
+    #08152a
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+.pubTitle h1 {
+  color: #f7f58d; /* fallback */
+  background: -webkit-linear-gradient(
+    45deg,
+    #08152a,
+    #06265b,
+    #1155cc,
+    #3c78d8
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+
+/* background effects -------------------------------------------------------------------------------*/
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -5;
+  background: linear-gradient(45deg, #08152a, #06265b, #1155cc, #3c78d8);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+.pubSwiper .swiper-slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+  background: linear-gradient(45deg, #3c78d8, #1155cc, #06265b, #08152a);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+#contactMeForm .formGroup .inputBox .line {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  transition: 0.5s ease-in-out;
+  pointer-events: none;
+  background: linear-gradient(45deg, #3c78d8, #1155cc, #06265b, #08152a);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+
+/* landing styling -------------------------------------------------------------------------------*/
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.welcome {
+  text-align: center;
+}
+/*
+.hint {
+  text-align: center;
+}
+*/
+.nav {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.nav a,
+.formGroup a {
+  position: relative;
+  background: transparent;
+  padding: 10px;
+  margin: 5px;
+  width: 240px;
+  height: 40px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.nav a:before,
+.formGroup a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #f7f58d;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+.nav a:hover:before,
+.formGroup a:hover:before {
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+.nav a:after,
+.formGroup a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #f7f58d;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+.nav a:hover:after,
+.formGroup a:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+
+/* about me styling -------------------------------------------------------------------------------*/
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* remove the weird scrollbar behavior */
+}
+.links {
+  display: flex;
+  flex-direction: row;
+}
+.links a {
+  position: relative;
+  background: transparent;
+  padding: 10px;
+  margin: 50px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links a:hover {
+  z-index: 3;
+}
+.links a:before {
+  content: "";
+  pointer-events: none;
+  z-index: -1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: #f7f58d;
+  opacity: 0;
+  font-weight: 500;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s, right 0.5s, opacity 0.3s;
+}
+.links a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  letter-spacing: 10px;
+}
+.links a.smallerLink:before {
+  white-space: nowrap;
+  font-size: 3em;
+}
